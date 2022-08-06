@@ -1,70 +1,74 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package calculadora;
 
-import java.util.Scanner;
-/*
- * @author jose.avelino
- */
+import javax.swing.JOptionPane;
+
 public class Calculadora {
 
     public static void main(String[] args) {
         
-        float A, B, sum, sub, mult, div, raiz;
-        int opt;
-        Scanner val = new Scanner(System.in);
-        
-        do {    
+        float A,B,sum, sub, mult, div, raiz;
+        int opt, segue;
+             
+        do {
+             
+            //menu
+            opt = Integer.parseInt(JOptionPane.showInputDialog(
+                "=============================\n"+
+                "O que gostaria de fazer?\n" + 
+                "1 - SOMAR\n" + 
+                "2 - DIMINUIR\n" + 
+                "3 - MULTIPLICAR\n" + 
+                "4 - DIVIDIR\n" + 
+                "5 - RAIZ\n"  
+                )
+            ); 
             
-            System.out.println("=============================");
-             //get values
-             System.out.print("Digite um valor: ");
-                 A = val.nextInt();
-             System.out.print("Digite outro valor: ");
-                 B = val.nextInt();
-
-             //menu
-             System.out.println("O que gostaria de fazer?");
-             System.out.println("1 - SOMAR");
-             System.out.println("2 - DIMINUIR");
-             System.out.println("3 - MULTIPLICAR");
-             System.out.println("4 - DIVIDIR");
-             System.out.println("5 - RAIZ");
-             System.out.println("0 - SAIR");
-                 opt = val.nextInt();
-
-             switch (opt) {
-                 case 1:
-                     sum = A+B;
-                     System.out.println("O resultado da SOMA é: "+ sum);
-                     break;
-                 case 2:
-                     sub = A-B;
-                     System.out.println("O resultado da SUTRAÇÃO é: "+ sub);
-                     break;
-                 case 3:
-                     mult = A*B;
-                     System.out.println("O resultado da MULTIPLICAÇÃO é: "+ mult);
-                     break;
-                 case 4:
-                     div = A/B;
-                     System.out.println("O resultado da DIVISÃO: "+ div);
-                     break;
-                 case 5:
-                     raiz = A+B;
-                     System.out.println("O resultado da RAIZ QUADRADA é: "+ raiz);
-                     break;
-                 case 0:
-                     
-                     break;
-                 default:
-                     throw new AssertionError("FAVOR ESCOLHER UM VALOR VÁLIDO!");
-             } 
-        } while (opt != 0);
-        System.out.println("SAINDO...");
+            switch (opt) {
+                case 1:
+                   A = Float.parseFloat(JOptionPane.showInputDialog("Digite um valor"));
+                   B = Float.parseFloat(JOptionPane.showInputDialog("Digite um valor"));
+                   sum = A+B;
+                   JOptionPane.showMessageDialog(null,"O resultado da SOMA é: "+ sum);
+                   break;
+                case 2:
+                   A = Float.parseFloat(JOptionPane.showInputDialog("Digite um valor"));
+                   B = Float.parseFloat(JOptionPane.showInputDialog("Digite um valor"));
+                   sub = A-B;
+                   JOptionPane.showMessageDialog(null,"O resultado da SUBTRAÇÃO é: "+ sub);
+                   break;
+                case 3:
+                   A = Float.parseFloat(JOptionPane.showInputDialog("Digite um valor"));
+                   B = Float.parseFloat(JOptionPane.showInputDialog("Digite um valor"));
+                   mult = A*B;
+                   JOptionPane.showMessageDialog(null,"O resultado da MULTIPLAÇÃO é: "+ mult);
+                   break;
+                case 4:
+                   A = Float.parseFloat(JOptionPane.showInputDialog("Digite um valor"));
+                   B = Float.parseFloat(JOptionPane.showInputDialog("Digite um valor"));       
+                   div = A/B;
+                   JOptionPane.showMessageDialog(null,"O resultado da DIVISÃO é: "+ div);
+                    break;
+                case 5:
+                   A = Float.parseFloat(JOptionPane.showInputDialog("Digite um valor"));
+                   raiz = (float) Math.sqrt(A);
+                   JOptionPane.showMessageDialog(null,"O resultado da RAIZ QUADRADA é: "+ raiz);
+                   break;
+                default:
+                    throw new AssertionError("FAVOR ESCOLHER UM VALOR VÁLIDO!");
+            } 
+            
+            segue = Integer.parseInt(JOptionPane.showInputDialog("Gostaria de Continuar?\n"
+                    +"Digite [0] para sair\n"
+                    +"Digite [1] para continuar\n"
+            ));
+              
+        } while (segue != 0);
+            
+           
+            
+        System.out.println("\n SAINDO...");
                 
     }
     
 }
+
