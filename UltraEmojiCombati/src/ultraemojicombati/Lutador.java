@@ -9,15 +9,29 @@ public class Lutador {
     
     //Métodos Publicos
     public void apresentar(){
-    };
+        System.out.println("LADIES AND GENTLEMAN! Apresentamos o lutador" + this.getNome());
+        System.out.println("Vindo de " + this.getNacionalidade());
+        System.out.println("com  " + this.getPeso() + " Kg");
+        System.out.println(this.getVitorias() + " vitórias.");
+        System.out.println("com  " + this.getEmpates()+ " empates");
+        System.out.println(this.getDerrotas()+ " derrotas.");
+    };  
             
     public void status(){
+            System.out.println(getNome() + "é um peso " + this.getCategoria());
+            System.out.println("Possui " + this.getVitorias());
+            System.out.println("Possui " + this.getEmpates());
+            System.out.println("Possui " + this.getDerrotas());
     };
     public void ganharLuta(){
+        this.setVitorias(getVitorias()+1);
+//        this.vitorias = this.vitorias + 1;
     };
     public void perderLuta(){
+        this.setDerrotas(getDerrotas()+1);
     };
     public void empatarLuta(){
+        this.setEmpates(getEmpates()+1);
     };
         
     //Métodos Especiais
@@ -27,8 +41,10 @@ public class Lutador {
         this.nome = nome;
         this.nacionalidade = nacionalidade;
         this.altura = altura;
+        this.setPeso(peso);
         this.vitorias = vitorias;
         this.empates = empates;
+        this.derrotas = derrotas;
     }
     
     //Getters and Setters
@@ -54,7 +70,17 @@ public class Lutador {
     }
 
     private void setCategoria() {
-        this.categoria = categoria;
+        if (this.peso < 52.5) {
+            this.categoria = "Inválido";
+        }else if(this.peso <= 70.3){
+            this.categoria = "Leve";
+        }else if(this.peso <=83.9){
+            this.categoria = "Médio";
+        }else if(this.peso <=120.2){
+            this.categoria = "Pesado";
+        }else{
+            this.categoria = "Inválido";
+        }
     }
 
     public float getAltura() {
