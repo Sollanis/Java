@@ -37,7 +37,7 @@ public class Lutador {
     //Métodos Especiais
     
     //Construtor
-    public Lutador(String nome, String nacionalidade, float altura, int vitorias, int empates) {
+    public Lutador(String nome, String nacionalidade, float altura,float peso, int vitorias, int empates, int derrotas) {
         this.nome = nome;
         this.nacionalidade = nacionalidade;
         this.altura = altura;
