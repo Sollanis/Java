@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package view;
+package Views;
 
 /**
  *
@@ -35,6 +35,7 @@ public class Login extends javax.swing.JFrame {
         lblFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(800, 600));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblUsuario.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
@@ -60,10 +61,10 @@ public class Login extends javax.swing.JFrame {
         lblLogin.setText("LOGIN");
         getContentPane().add(lblLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 150, -1, -1));
 
-        lblPainel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/painel-login.png"))); // NOI18N
+        lblPainel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Views/images/painel-login.png"))); // NOI18N
         getContentPane().add(lblPainel, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, -1, -1));
 
-        lblFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Logo.jpg"))); // NOI18N
+        lblFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Views/images/Logo.jpg"))); // NOI18N
         getContentPane().add(lblFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -150, 810, 1172));
 
         pack();

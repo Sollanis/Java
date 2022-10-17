@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package view;
+package Views;
 
 /**
  *
@@ -34,18 +34,19 @@ public class MenuPrincipal extends javax.swing.JFrame {
         menuOperacao = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(800, 600));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/fundo-MenuPrincipal.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Views/images/fundo-MenuPrincipal.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 6, 1892, -1));
 
         menuCadastro.setText("Cadastro");
 
-        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/icons/cliente-icon.png"))); // NOI18N
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Views/images/icons/cliente-icon.png"))); // NOI18N
         jMenuItem1.setText("Cliente");
         menuCadastro.add(jMenuItem1);
 
-        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/icons/tesoura-icon.png"))); // NOI18N
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Views/images/icons/tesoura-icon.png"))); // NOI18N
         jMenuItem2.setText("Serviço");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
