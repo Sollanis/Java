@@ -40,28 +40,28 @@ public class Login extends javax.swing.JFrame {
         lblUsuario.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         lblUsuario.setForeground(new java.awt.Color(255, 255, 255));
         lblUsuario.setText("Usuário");
-        getContentPane().add(lblUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 410, -1, -1));
+        getContentPane().add(lblUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 440, -1, -1));
 
         txtUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtUsuarioActionPerformed(evt);
             }
         });
-        getContentPane().add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 440, 170, 40));
+        getContentPane().add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 470, 170, 40));
 
         lblSenha.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         lblSenha.setForeground(new java.awt.Color(255, 255, 255));
         lblSenha.setText("Senha");
-        getContentPane().add(lblSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 510, -1, -1));
-        getContentPane().add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 550, 170, 40));
+        getContentPane().add(lblSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 540, -1, -1));
+        getContentPane().add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 580, 170, 40));
 
         lblLogin.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
         lblLogin.setForeground(new java.awt.Color(255, 255, 255));
         lblLogin.setText("LOGIN");
-        getContentPane().add(lblLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 150, -1, -1));
+        getContentPane().add(lblLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 310, -1, -1));
 
         lblPainel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/painel-login.png"))); // NOI18N
-        getContentPane().add(lblPainel, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, -1, -1));
+        getContentPane().add(lblPainel, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, -1, -1));
 
         lblFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Logo.jpg"))); // NOI18N
         getContentPane().add(lblFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -150, 810, 1172));
